@@ -1,0 +1,20 @@
+def justify_sentence(sentence, screen_length):
+    words = sentence.split()
+    total_spaces = screen_length - len(''.join(words))
+    spaces_between_words = total_spaces // (len(words) - 1)
+    extra_spaces = total_spaces % (len(words) - 1)
+
+    justified_sentence = '*' * spaces_between_words
+    for i in range(extra_spaces):
+        justified_sentence += '*' + words[i]
+    for i in range(extra_spaces, len(words) - 1):
+        justified_sentence += '*' * spaces_between_words + words[i]
+
+    justified_sentence += '*' * extra_spaces + words[-1]
+    print(justified_sentence)
+
+# Sample Input 1
+justify_sentence("Welcome to Zoho Corporation", 34)
+
+# Sample Input 2
+justify_sentence("Welcome to Zoho Corporation", 36)
