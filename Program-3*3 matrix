@@ -1,0 +1,6 @@
+# Get input values from the user and store in a 3x3 matrix
+matrix = [[int(input()) for _ in range(3)] for _ in range(3)]
+
+# Display the matrix
+for row in matrix:
+    print(*row)
