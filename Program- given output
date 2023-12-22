@@ -1,0 +1,18 @@
+# Function to process the input and generate the output
+def process_input(input_str):
+    output_str = ''
+    current_char = ''
+    
+    for char in input_str:
+        if char.isalpha():
+            current_char = char
+        elif char.isdigit():
+            output_str += current_char * int(char)
+
+    return output_str
+
+# Get input from the user
+input_str = input("Input: ")
+
+# Display the processed output
+print("Output:", process_input(input_str))
