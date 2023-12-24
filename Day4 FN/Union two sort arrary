@@ -1,0 +1,12 @@
+def find_union(arr1, arr2):
+    set_union = set(arr1).union(set(arr2))
+    return sorted(list(set_union))
+
+# Example usage:
+arr1_1, arr2_1 = [1, 2, 3, 4, 5], [1, 2, 3]
+result1_1 = find_union(arr1_1, arr2_1)
+print(result1_1)  # Output: [1, 2, 3, 4, 5]
+
+arr1_2, arr2_2 = [2, 2, 3, 4, 5], [1, 1, 2, 3, 4]
+result2_2 = find_union(arr1_2, arr2_2)
+print(result2_2)  # Output: [1, 2, 3, 4, 5]
