@@ -1,0 +1,18 @@
+def swap_by_value(a, b):
+    temp = a
+    a = b
+    b = temp
+    return a, b
+
+# Example usage:
+num1, num2 = 5, 10
+num1, num2 = swap_by_value(num1, num2)
+print(num1, num2)  # Output: 10   5          
+def swap_by_reference(arr):
+    arr[0], arr[1] = arr[1], arr[0]
+    return arr[0], arr[1]
+
+# Example usage:
+numbers = [5, 10]
+numbers = swap_by_reference(numbers)
+print(numbers[0], numbers[1])  # Output: 10 5
