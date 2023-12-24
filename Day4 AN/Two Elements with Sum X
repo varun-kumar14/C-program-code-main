@@ -1,0 +1,21 @@
+def has_pair_with_sum(arr, X):
+    seen = set()
+
+    for num in arr:
+        complement = X - num
+        if complement in seen:
+            return True
+        seen.add(num)
+
+    return False
+
+# Example usage:
+arr3 = [1, 4, 45, 6, 10, 8]
+X3 = 16
+result3 = has_pair_with_sum(arr3, X3)
+print(result3)  # Output: True
+
+arr4 = [1, 2, 4, 3, 6]
+X4 = 10
+result4 = has_pair_with_sum(arr4, X4)
+print(result4)  # Output: True
