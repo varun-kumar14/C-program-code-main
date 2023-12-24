@@ -1,0 +1,25 @@
+def second_largest_distinct(arr):
+    n = len(arr)
+
+    # Find the largest element
+    first_max = max(arr)
+
+    # Find the index of the largest element
+    first_max_index = arr.index(first_max)
+
+    # Set the largest element to a very small value
+    arr[first_max_index] = float('-inf')
+
+    # Find the second largest element
+    second_max = max(arr)
+
+    return second_max
+
+# Example usage:
+arr1 = [12, 35, 1, 10, 34, 1]
+result1 = second_largest_distinct(arr1)
+print(result1)  # Output: 34
+
+arr2 = [10, 5, 10]
+result2 = second_largest_distinct(arr2)
+print(result2)  # Output: 5
