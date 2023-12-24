@@ -1,0 +1,24 @@
+def find_first_last_occurrences(arr, n, x):
+    first_occurrence = -1
+    last_occurrence = -1
+
+    for i in range(n):
+        if arr[i] == x:
+            if first_occurrence == -1:
+                first_occurrence = i
+            last_occurrence = i
+
+    return first_occurrence, last_occurrence
+
+# Example usage:
+arr5 = [1, 3, 5, 5, 5, 5, 67, 123, 125]
+n5 = len(arr5)
+x5 = 5
+result5 = find_first_last_occurrences(arr5, n5, x5)
+print(result5)  # Output: (2, 5)
+
+arr6 = [1, 3, 5, 5, 5, 5, 7, 123, 125]
+n6 = len(arr6)
+x6 = 7
+result6 = find_first_last_occurrences(arr6, n6, x6)
+print(result6)  # Output: (6, 6)
