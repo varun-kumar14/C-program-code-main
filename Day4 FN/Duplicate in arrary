@@ -1,0 +1,23 @@
+def find_duplicates(arr):
+    seen = set()
+    duplicates = set()
+
+    for num in arr:
+        if num in seen:
+            duplicates.add(num)
+        else:
+            seen.add(num)
+
+    if not duplicates:
+        return [-1]
+
+    return sorted(list(duplicates))
+
+# Example usage:
+arr1 = [0, 3, 1, 2]
+result1 = find_duplicates(arr1)
+print(result1)  # Output: [-1]
+
+arr2 = [2, 3, 1, 2, 3]
+result2 = find_duplicates(arr2)
+print(result2)  # Output: [2, 3]
